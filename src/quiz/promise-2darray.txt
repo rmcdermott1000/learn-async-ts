@@ -1,1 +1,7 @@
 Explain the code execution based on the order of the messages logged in src/quiz/promise-2darray.txt.
+
+The code execution is because we are calling sum2darray which returns a promies, 
+but we are not waiting for that function to be over before calling the next function that returns a promise. 
+The settimeout function means it runs asynchronously. 
+The next log is because the array is empty so the promise gets rejected.
+The promises can either be in a rejected state or a resolved state so we can use effective error handeling.
